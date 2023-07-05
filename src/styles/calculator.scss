@@ -1,0 +1,168 @@
+.cal-container{
+    display:flex;
+
+   button{
+    font-size: 1.4rem;
+    border-style: none;
+    cursor: pointer;
+    color: white;
+
+   }
+
+
+    .cal-wrapper{
+        display: grid;
+        gap: 1rem;
+        align-items:end;
+        grid-template: repeat(6,1fr) / repeat(4,1fr);
+        grid-template-areas: 
+        "text text text text"
+        "resets percent poin divide"
+        "array array array mult"
+        "array array array minus"
+        "array array array plus"
+        "jero jero total total";
+ 
+
+     
+
+        .cal-item{
+            height: 90px;
+            width: 90px;
+            border-radius: 100%;
+
+            
+        }
+        .cal-item-x{
+            height: 5rem;
+            background-color: rgba(245, 222, 179, 0.067);
+        
+
+       &.text{
+            grid-area: text;
+            display: flex;
+           
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 4rem;
+            
+            .inpt{
+                height: 100%;
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family:Arial, Helvetica, sans-serif;
+                color: aliceblue;
+                font-weight:900;
+            }  
+        }
+    }
+
+        .array{
+            grid-area: array;
+            display: grid;
+            gap: 1rem;
+            grid-template: repeat(3,1fr) / repeat(3,1fr);
+            button{
+                width: 90px;
+                height: 90px;
+                border-radius: 100%;
+                background-color: $grey;
+            }
+            button:hover{
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 255, 255);
+            }  
+            
+        }
+        
+        .resets{
+            grid-area: resets;
+            background-color: $dirty;
+        }
+        .resets:hover{
+            color: black;
+            background-color: whitesmoke;
+        }
+        .percent{
+            grid-area: percent;
+            background-color: $dirty;
+        }
+        .percent:hover{
+            color: black;
+            background-color: whitesmoke;
+        }
+        .poin{
+            grid-area: poin;
+            background-color: $dirty;
+            font-size: 3rem;
+        }
+        .poin:hover{
+            color: black;
+            background-color: whitesmoke;
+        }
+        .divide{
+            grid-area: divide;
+            background-color: $orangesun;
+            font-size: 3rem;
+        }
+        .divide:hover{
+            color: orange;
+            background-color: whitesmoke;
+        }
+        .mult{
+            grid-area: mult;
+            background-color: $orangesun;
+            font-size: 3rem;
+        }
+        .mult:hover{
+            color: orange;
+            background-color: whitesmoke;
+        }
+        .minus{
+            grid-area: minus;
+            background-color: $orangesun;
+            font-size: 3rem;
+        }
+        .minus:hover{
+            color: orange;
+            background-color: whitesmoke;
+        }
+        .plus{
+            grid-area: plus;
+            background-color: $orangesun;
+            font-size: 3rem;
+        }
+        .plus:hover{
+            color: orange;
+            background-color: whitesmoke;
+        }
+        .jero{
+            grid-area: jero;
+            width: 100%;
+            height: 100%;
+            border-radius: 4rem 4rem 4rem 4rem;
+            background-color: $dirty;
+    
+        }
+        .jero:hover{
+            color: black;
+            background-color: whitesmoke;
+        }
+        .total{
+            grid-area: total;
+            width: 100%;
+            height: 100%;
+            border-radius: 4rem 4rem 4rem 4rem;
+            background-color: $orangesun;
+            font-size: 3rem;
+            
+        }
+        .total:hover{
+            color: orange;
+            background-color: whitesmoke;
+        }
+
+    }
+}
